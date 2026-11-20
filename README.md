@@ -7,7 +7,8 @@ one stylesheet and one script; no build step. Netlify publishes the branch it wa
 | File | Purpose |
 |---|---|
 | `index.html` | Dealer home: F&I pitch, gross calculator, dealer FAQ |
-| `lineup.html` | Shop: Safelink Bicycle GPS (GLS11), rider FAQ, coming-soon products |
+| `bicycle-gps.html` | Product page for the Safelink Bicycle GPS (GLS11): gallery, buy box, specs, comparison, rider FAQ |
+| `lineup.html` | Shop: the full lineup, dealer programs and coming-soon products |
 | `platform.html` | Dealer dashboard |
 | `product.html` | GForce vehicle hardware |
 | `contact.html` | Inquiry form (short for riders, full for dealers) |
@@ -21,8 +22,8 @@ one stylesheet and one script; no build step. Netlify publishes the branch it wa
 
 ## Search and AI visibility
 - `sitemap.xml`, `robots.txt`, `llms.txt` (a plain summary for AI assistants).
-- Structured data: Organization, WebSite and FAQPage on the home page; Product and
-  FAQPage on the shop page. Keep the FAQ text on the page and in the JSON-LD identical.
+- Structured data: Organization, WebSite and FAQPage on the home page; Product, BreadcrumbList
+  and FAQPage on the product page. Keep the FAQ text on the page and in the JSON-LD identical.
 
 ## Brand
 - Type: Barlow Condensed (headings), Barlow (body), Barlow Semi Condensed (labels).
@@ -32,3 +33,9 @@ one stylesheet and one script; no build step. Netlify publishes the branch it wa
 ## Copy rules
 Spell it "Safelink". AAC is the agent, not the manufacturer. Use only facts Safelink has
 confirmed in writing: no invented recovery rates, testimonials, prices or fit sizes.
+
+## Quality checks used before every release
+- `[hidden]` always wins over component `display` rules (see the top of `style.css`).
+- HTML validated with html-validate; accessibility scanned with axe (WCAG 2.1 AA) at
+  1280px and 390px; Lighthouse mobile run on the main pages.
+- Images are WebP with 640w and 1100w versions; the JPEGs stay for social previews.

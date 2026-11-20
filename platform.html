@@ -63,7 +63,7 @@
       <a href="index.html#partners">Partners</a>
       <a href="contact.html" class="nav-cta">Book a Consult</a>
     </nav>
-    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <button type="button" class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span class="burger-line"></span>
       <span class="burger-line"></span>
       <span class="burger-line"></span>
@@ -86,8 +86,9 @@
     </div>
   </nav>
 </header>
+<main id="main">
 
-<section id="main" class="page-hero">
+<section class="page-hero">
   <div class="hero-grid"></div>
   <div class="wrap page-hero-inner">
     <div class="crumbs"><a href="index.html">Home</a> / Dashboard</div>
@@ -106,12 +107,12 @@
     <div class="split">
       <div class="split-media">
         <span class="shot-tag mono">INVENTORY MANAGEMENT</span>
-        <img class="shot" src="assets/img/dash-overview.jpg" width="1400" height="910" alt="Safelink dealer dashboard overview showing total sales, devices sold, inventory counts, and sales by finance manager, with sample data">
+        <img loading="lazy" decoding="async" srcset="assets/img/dash-overview-640.webp 640w, assets/img/dash-overview-1100.webp 1100w" sizes="(max-width: 900px) 92vw, 560px" class="shot" src="assets/img/dash-overview-1100.webp" width="1400" height="910" alt="Safelink dealer dashboard overview showing total sales, devices sold, inventory counts, and sales by finance manager, with sample data">
         <p class="shot-note">Dealer dashboard overview. Sample data shown.</p>
       </div>
       <div class="split-copy">
         <div class="coord">SMART INVENTORY MANAGEMENT</div>
-        <h3>Track, manage, and optimize the lot without walking it.</h3>
+        <h2 class="split-h">Track, manage, and optimize the lot without walking it.</h2>
         <p class="desc">Every Safelink-equipped unit reports its position, battery health, and last-known condition into one map view — so a lot check that used to take a walk-through takes a glance.</p>
         <ul class="feature-list">
           <li><span class="mark">→</span> Real-time vehicle location and status tracking</li>
@@ -129,11 +130,11 @@
     <div class="split reverse">
       <div class="split-media">
         <span class="shot-tag mono">SMART GEOFENCING</span>
-        <img class="shot" src="assets/img/dash-geofence.jpg" alt="TruePoint360 geofencing dashboard showing a custom safe zone with vehicle alerts">
+        <img loading="lazy" decoding="async" width="1100" height="966" srcset="assets/img/dash-geofence-640.webp 640w, assets/img/dash-geofence-1100.webp 1100w" sizes="(max-width: 900px) 92vw, 560px" class="shot" src="assets/img/dash-geofence-1100.webp" alt="TruePoint360 geofencing dashboard showing a custom safe zone with vehicle alerts">
       </div>
       <div class="split-copy">
         <div class="coord">ENHANCE SECURITY WITH SMART GEOFENCING</div>
-        <h3>Know the moment a unit leaves the lot.</h3>
+        <h2 class="split-h">Know the moment a unit leaves the lot.</h2>
         <p class="desc">Draw a custom geofence around the lot, a satellite storage yard, or an off-site auction line, and get an alert the instant a vehicle crosses the boundary — day or night.</p>
         <ul class="feature-list">
           <li><span class="mark">→</span> Custom geofences define safe zones per location</li>
@@ -153,7 +154,7 @@
       <h2>Trip history, geofencing, and alerts — in your customer's pocket.</h2>
       <p>The same platform extends to a mobile app your customer uses directly, with real-time alerts for ignition, harsh braking, low battery, tampering, and more.</p>
     </div>
-    <img class="phone-shot" src="assets/img/phones-strip.jpg" alt="TruePoint GPS mobile app showing trip history, geofence, and notifications screens">
+    <img loading="lazy" decoding="async" width="1100" height="433" srcset="assets/img/phones-strip-640.webp 640w, assets/img/phones-strip-1100.webp 1100w" sizes="(max-width: 1180px) 92vw, 1116px" class="phone-shot" src="assets/img/phones-strip-1100.webp" alt="TruePoint GPS mobile app showing trip history, geofence, and notifications screens">
   </div>
 </section>
 
@@ -167,17 +168,17 @@
     <div class="mode-grid">
       <div class="mode-cell low">
         <span class="impact mono">BATTERY IMPACT — LOW</span>
-        <h4>PowerSave Mode</h4>
+        <h3>PowerSave Mode</h3>
         <p>Ultra-efficient mode for maximum battery life with 24-hour location updates. Ideal for units sitting in inventory.</p>
       </div>
       <div class="mode-cell medium">
         <span class="impact mono">BATTERY IMPACT — MEDIUM</span>
-        <h4>Smart Trip Mode</h4>
+        <h3>Smart Trip Mode</h3>
         <p>Smart monitoring with instant alerts for movement or boundary breaches. Built for 24/7 peace of mind once a unit is sold.</p>
       </div>
       <div class="mode-cell high">
         <span class="impact mono">BATTERY IMPACT — HIGH</span>
-        <h4>Recover+ Mode</h4>
+        <h3>Recover+ Mode</h3>
         <p>Enables real-time tracking to assist in stolen vehicle recovery. Recommended for emergency use only, once a theft is reported.</p>
       </div>
     </div>
@@ -225,7 +226,7 @@
   <div class="wrap follow-row">
     <div>
       <div class="coord">STAY CONNECTED</div>
-      <h3>Product walk-throughs, install clips, and dealer updates.</h3>
+      <h2 class="follow-h">Product walk-throughs, install clips, and dealer updates.</h2>
     </div>
     <div class="social-row follow-social">
       <a href="https://www.linkedin.com/company/advancedautomotiveconcepts" target="_blank" rel="noopener" aria-label="Advanced Automotive Concepts on LinkedIn" class="soc soc-linkedin"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
@@ -237,6 +238,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap foot-grid">
@@ -256,17 +258,17 @@
       </div>
     </div>
     <div class="foot-col">
-      <h5>Explore</h5>
+      <h2 class="foot-h">Explore</h2>
       <a href="index.html">Home</a>
       <a href="platform.html">Dealer Dashboard</a>
       <a href="product.html">GForce Hardware</a>
-      <a href="lineup.html">Shop Bicycle GPS</a>
+      <a href="bicycle-gps.html">Shop Bicycle GPS</a>
       <a href="contact.html">Book a Consult</a>
       <a href="shipping-returns.html">Shipping &amp; Returns</a>
       <a href="privacy.html">Privacy Notice</a>
     </div>
     <div class="foot-col">
-      <h5>Contact</h5>
+      <h2 class="foot-h">Contact</h2>
       <a href="tel:19493241208">(949) 324-1208</a>
       <a href="mailto:mlarsen@advancedautomotiveconcepts.net">mlarsen@advancedautomotiveconcepts.net</a>
       <span>11 Orchard Rd<br>Lake Forest, CA 92630</span>
