@@ -1,4 +1,16 @@
+# Search engines and AI assistants are welcome to read and cite this site.
 User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+# Named explicitly so a future blanket rule cannot block them by accident.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 Allow: /
 Disallow: /thank-you.html
 

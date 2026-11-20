@@ -69,6 +69,43 @@ document.addEventListener('DOMContentLoaded', function () {
     run();
   }
 
+  // Product gallery: switch between the poster and the two videos
+  var gallery = document.querySelector('[data-gallery]');
+  if (gallery) {
+    var mainImg = document.getElementById('galleryMain');
+    var mainVid = document.getElementById('galleryVideo');
+    gallery.querySelectorAll('.thumb').forEach(function (t) {
+      t.addEventListener('click', function () {
+        gallery.querySelectorAll('.thumb').forEach(function (o) {
+          o.classList.toggle('is-active', o === t);
+          o.setAttribute('aria-pressed', o === t ? 'true' : 'false');
+        });
+        if (t.dataset.video) {
+          mainImg.hidden = true;
+          mainVid.hidden = false;
+          mainVid.poster = t.dataset.poster;
+          mainVid.src = t.dataset.video;
+          mainVid.play().catch(function () {});
+        } else {
+          mainVid.pause();
+          mainVid.removeAttribute('src');
+          mainVid.load();
+          mainVid.hidden = true;
+          mainImg.hidden = false;
+        }
+      });
+    });
+  }
+
+  // Sticky buy bar on phones: visible whenever the main buy button is off screen
+  var sticky = document.getElementById('stickyBuy');
+  var mainBuy = document.querySelector('#buy [data-buy]');
+  if (sticky && mainBuy && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      sticky.hidden = entries[0].isIntersecting;
+    }).observe(mainBuy);
+  }
+
   // Only one video plays at a time
   var vids = document.querySelectorAll('video');
   vids.forEach(function (v) {
