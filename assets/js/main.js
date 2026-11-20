@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('o-month').textContent = ok ? money(sold * gross) : '—';
       document.getElementById('o-year').textContent = ok ? money(sold * gross * 12) : '—';
       document.getElementById('o-pvr').textContent = ok ? money(pen * gross) : '—';
+      var cta = document.getElementById('calcCta');
+      if (cta) cta.href = 'contact.html?interest=Dealer%20F%26I%20program&units=' + Math.round(units) + '&pen=' + Math.round(pen * 100);
     };
     calc.addEventListener('input', run);
     run();
@@ -74,17 +76,4 @@ document.addEventListener('DOMContentLoaded', function () {
       vids.forEach(function (o) { if (o !== v) o.pause(); });
     });
   });
-
-  // Scroll reveal (content stays visible if the browser lacks IntersectionObserver)
-  var reveal = document.querySelectorAll('.fade-up');
-  if (!('IntersectionObserver' in window)) {
-    reveal.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.08 });
-  reveal.forEach(function (el) { observer.observe(el); });
 });

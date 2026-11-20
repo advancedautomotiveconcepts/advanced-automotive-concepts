@@ -6,19 +6,27 @@
 <title>Book a Consult — Advanced Automotive Concepts</title>
 <meta name="description" content="Book a 15-minute consult to walk through Safelink Theft Recovery economics, install logistics, and your dealership's F&I menu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="canonical" href="https://advancedautomotiveconcepts.net/contact.html">
-<link rel="icon" type="image/png" href="assets/img/logo.png">
-<meta name="theme-color" content="#1B1D21">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#17191D">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Advanced Automotive Concepts">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="Book a Consult — Advanced Automotive Concepts">
 <meta property="og:description" content="Book a 15-minute consult to walk through Safelink Theft Recovery economics, install logistics, and your dealership's F&I menu.">
 <meta property="og:url" content="https://advancedautomotiveconcepts.net/contact.html">
-<meta property="og:image" content="https://advancedautomotiveconcepts.net/assets/img/dash-inventory.jpg">
+<meta property="og:image" content="https://advancedautomotiveconcepts.net/assets/img/dash-overview.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@AdvAutoConcepts">
+<meta name="twitter:title" content="Book a Consult — Advanced Automotive Concepts">
+<meta name="twitter:description" content="Book a 15-minute consult to walk through Safelink Theft Recovery economics, install logistics, and your dealership's F&I menu.">
+<meta name="twitter:image" content="https://advancedautomotiveconcepts.net/assets/img/dash-overview.jpg">
 </head>
 <body>
 
@@ -42,7 +50,7 @@
   </div>
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <img src="assets/img/logo.png" alt="Advanced Automotive Concepts" width="38" height="36">
+      <img src="favicon.svg" alt="" width="36" height="36">
       <div class="brand-text">ADVANCED AUTOMOTIVE CONCEPTS
         <span>AUTHORIZED SAFELINK AGENT · LAKE FOREST, CA</span>
       </div>
@@ -51,7 +59,7 @@
       <a href="index.html">Home</a>
       <a href="platform.html">Dashboard</a>
       <a href="product.html">Product</a>
-      <a href="lineup.html">Lineup</a>
+      <a href="lineup.html">Shop</a>
       <a href="index.html#partners">Partners</a>
       <a href="contact.html" class="nav-cta active">Book a Consult</a>
     </nav>
@@ -65,7 +73,7 @@
     <a href="index.html">Home</a>
     <a href="platform.html">Dashboard</a>
     <a href="product.html">Product</a>
-    <a href="lineup.html">Lineup</a>
+    <a href="lineup.html">Shop</a>
     <a href="index.html#partners">Partners</a>
     <a href="contact.html" class="nav-cta">Book a Consult</a>
     <div class="social-row mobile-social">
@@ -91,7 +99,7 @@
 
 <section class="cta-section">
   <div class="wrap">
-    <div class="cta-grid fade-up">
+    <div class="cta-grid">
       <div class="cta-left">
         <div class="coord" style="margin-bottom:16px;">DEALER INQUIRY</div>
         <h2>Tell us what you need.</h2>
@@ -103,7 +111,7 @@
               <label for="f-name">Name</label>
               <input id="f-name" type="text" name="Name" required>
             </div>
-            <div>
+            <div data-dealer-only>
               <label for="f-dealer">Dealership or company <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
               <input id="f-dealer" type="text" name="Dealership">
             </div>
@@ -118,7 +126,7 @@
               <input id="f-phone" type="tel" name="Phone">
             </div>
           </div>
-          <div class="row2">
+          <div class="row2" data-dealer-only>
             <div>
               <label for="f-role">Title or role <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
               <input id="f-role" type="text" name="Title" placeholder="e.g. F&amp;I Director">
@@ -211,7 +219,7 @@
   <div class="wrap foot-grid">
     <div class="foot-brand">
       <a href="index.html" class="brand">
-        <img src="assets/img/logo.png" alt="" width="38" height="36">
+        <img src="favicon.svg" alt="" width="36" height="36">
         <div class="brand-text">ADVANCED AUTOMOTIVE CONCEPTS</div>
       </a>
       <p>Authorized agent for Safelink Theft Recovery, Revv1, and Uplift BDC. Serving franchise, independent, and powersport dealers from Lake Forest, California.</p>
@@ -229,7 +237,7 @@
       <a href="index.html">Home</a>
       <a href="platform.html">Dealer Dashboard</a>
       <a href="product.html">GForce Hardware</a>
-      <a href="lineup.html">Product Lineup</a>
+      <a href="lineup.html">Shop Bicycle GPS</a>
       <a href="contact.html">Book a Consult</a>
       <a href="shipping-returns.html">Shipping &amp; Returns</a>
       <a href="privacy.html">Privacy Notice</a>
@@ -262,8 +270,28 @@
   if (wanted) {
     var sel = document.getElementById('f-interest');
     Array.prototype.forEach.call(sel.options, function (o) { if (o.text === wanted) sel.value = o.value; });
-    if (wanted !== 'Powersport program') document.getElementById('f-type').value = 'Individual owner or rider';
+    if (['Safelink Bicycle GPS (GLS11)', 'Motorcycle tracker', 'Personal card tracker'].indexOf(wanted) !== -1) document.getElementById('f-type').value = 'Individual owner or rider';
   }
+
+  var qs = new URLSearchParams(window.location.search);
+  if (qs.get('units')) {
+    var u = qs.get('units').replace(/[^0-9]/g, '');
+    var pen = (qs.get('pen') || '').replace(/[^0-9]/g, '');
+    document.getElementById('f-vol').value = u;
+    if (pen) document.getElementById('f-msg').value = 'Calculator: ' + u + ' units a month at ' + pen + '% penetration.';
+  }
+  var typeSel = document.getElementById('f-type');
+  var msgLabel = document.querySelector('label[for="f-msg"]');
+  var msgBox = document.getElementById('f-msg');
+  var dealerPlaceholder = msgBox.placeholder;
+  var syncType = function () {
+    var rider = typeSel.value === 'Individual owner or rider';
+    document.querySelectorAll('[data-dealer-only]').forEach(function (el) { el.hidden = rider; });
+    msgLabel.textContent = rider ? 'Anything we should know?' : 'What are you looking to solve?';
+    msgBox.placeholder = rider ? 'e.g. the bike you want to protect, how many units, your ZIP code' : dealerPlaceholder;
+  };
+  typeSel.addEventListener('change', syncType);
+  syncType();
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
