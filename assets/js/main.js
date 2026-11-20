@@ -12,7 +12,7 @@
              is empty, dealers use the inquiry form.
    ===================================================================== */
 var AAC = {
-  checkoutUrl: '',
+  checkoutUrl: 'https://advancedautomotiveconcepts.myshopify.com/products/safelink-bicycle-gps-tracker-gls11',
   bookingUrl: ''
 };
 
